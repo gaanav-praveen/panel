@@ -19,6 +19,10 @@ import {
   ContextGrandparent,
   ContextBravoWidget,
   ContextBravoParentWithNestedAlphaWidgets,
+  ContextlessSlottedWrapper,
+  ContextParentWithContextlessSlottedWrapper,
+  ContextlessComponentWrapper,
+  ContextParentWithContextlessComponentWrapper,
 } from './context-app';
 
 customElements.define(`attrs-reflection-app`, AttrsReflectionApp);
@@ -46,3 +50,7 @@ customElements.define(`nested-slotted-context-widgets`, NestedSlottedContextWidg
 customElements.define(`context-grandparent`, ContextGrandparent);
 customElements.define(`context-bravo-widget`, ContextBravoWidget);
 customElements.define(`context-bravo-parent-with-nested-alpha-widgets`, ContextBravoParentWithNestedAlphaWidgets);
+customElements.define(`contextless-slotted-wrapper`, ContextlessSlottedWrapper);
+customElements.define(`context-parent-with-contextless-slotted-wrapper`, ContextParentWithContextlessSlottedWrapper);
+customElements.define(`contextless-component-wrapper`, ContextlessComponentWrapper);
+customElements.define(`context-parent-with-contextless-component-wrapper`, ContextParentWithContextlessComponentWrapper);
