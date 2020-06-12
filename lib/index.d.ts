@@ -74,7 +74,7 @@ export interface ConfigOptions<StateT, AppStateT = unknown> {
   defaultState?: StateT;
 
   /** Expected contexts and their default values to share with descendant panel components */
-  defaultContexts?: Map<{new (): any}, any>;
+  defaultContexts?: Map<new () => any, any>;
 
   /**
    * A state object to share with nested descendant components. If not set, root component
@@ -226,5 +226,5 @@ export class Component<StateT, AttrsT = AnyAttrs, AppStateT = unknown, AppT = un
    */
   update(stateUpdate?: Partial<StateT> | ((state: StateT) => Partial<StateT>)): void;
 
-  getContext<BaseContext>(contextBaseClass: {new (): BaseContext}): BaseContext;
+  getContext<BaseContext>(contextBaseClass: new () => BaseContext): BaseContext;
 }
